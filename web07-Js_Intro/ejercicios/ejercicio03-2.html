@@ -4,16 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="./myScript.js">
+    <script src="./myScript.js" defer> /* Resuelve problema, ahora al final se ejectua archivo de javaScript o puedes poner e script al final, cuando ya esten renderizados todos los elementos. */
         console.log("Este mensaje nunca se mostrara"); /* No funciona la parte interna, se le da prioridad a la parte externa */
     </script> <!-- El numero de scripts es ilimitado -->
 </head>
 <body>
-    <h1>Web 07 - Ejercicio 03-2</h1>
+    <h1 id="title">Web 07 - Ejercicio 03-2</h1>
     <p>Reusando el mismo script que en ejercicio 03</p>
     <button onclick="cambiarColorFondo('tomato')">Oprime para cambiar color de fondo (rojo)</button>
     <button onclick="cambiarColorFondo('cyan')">Oprime para cambiar color de fondo (azul)</button>
     <button onclick="cambiarColorFondo('yellow')">Oprime para cambiar color de fondo (amarillo)</button>
+    <br>
+    <p id="green-paragraph" onclick="changeToGreenColor()">Cambiar a color verde</p>
+    <p id="red-paragraph" onclick="changeColor(document.getElementById('red-paragraph') , 'red')">Cambiar a color rojo</p>
+    <p id="yellow-paragraph" onclick="changeColor(this , 'yellow')">Cambiar a color amarillo</p><!-- Uso de this -->
+    <p id="blue-paragraph" onclick="changeColor(this , 'blue')">Cambiar a color azul</p> <!-- this apunta al objeto donde lo podemos -->
 
 </body>
 </html>
