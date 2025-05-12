@@ -20,4 +20,4 @@ function changeColor(element, color){
 (function setUp(){
     document.getElementById("title").style.color = "blue";
     document.getElementById("title").style.fontSize = "50px";
-})();
+})(); /* Se autoinvoca esta funcion */
