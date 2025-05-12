@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./myScript.js">
+        console.log("Este mensaje nunca se mostrara"); /* No funciona la parte interna, se le da prioridad a la parte externa */
+    </script> <!-- El numero de scripts es ilimitado -->
+</head>
+<body>
+    <h1>Web 07 - Ejercicio 03-2</h1>
+    <p>Reusando el mismo script que en ejercicio 03</p>
+    <button onclick="cambiarColorFondo('tomato')">Oprime para cambiar color de fondo (rojo)</button>
+    <button onclick="cambiarColorFondo('cyan')">Oprime para cambiar color de fondo (azul)</button>
+    <button onclick="cambiarColorFondo('yellow')">Oprime para cambiar color de fondo (amarillo)</button>
+
+</body>
+</html>
